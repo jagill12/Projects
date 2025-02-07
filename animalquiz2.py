@@ -276,196 +276,197 @@ resilience_adaptation = {"Composed", "Resourceful", "Progressive", "Supportive"}
 
 # Archetypes with their specific traits
 archetypes = {
-    "The Visionary": {
-    "traits": ["Social", "Optimistic", "Expressive", "Ethical", "Progressive"],
-    "fauna": ["Cheetah", "Newt"],
-    "description": "Visionaries are forward-thinkers who inspire change through optimism and creativity.\n"
-                   "They thrive on expressing themselves and working towards innovative solutions to challenges.\n"
-                   "Their strong sense of ethics and progressiveness drives them to shape a better future."
-    },
-    "The Nurturer": {
-    "traits": ["Harmonious", "Optimistic", "Compassionate", "Ethical", "Supportive"],
-    "fauna": ["Swan", "Deer"],
-    "description": "Nurturers are empathetic and supportive individuals who prioritize harmony and well-being.\n"
-                   "They bring positivity and compassion to their relationships, creating strong and lasting bonds.\n"
-                   "Their optimism and ethics make them trusted allies and caregivers." 
-    },
-    "The Strategist": {
-    "traits": ["Reserved", "Stable", "Innovative", "Contemplative", "Resourceful"],
-    "fauna": ["Lynx", "Raven"],
-    "description": "Strategists are introspective and methodical thinkers who excel at analyzing and solving complex problems.\n"
-                   "They value stability and creativity, combining logical planning with innovative approaches to challenges.\n"
-                   "Their resourcefulness and contemplative nature make them excellent at adapting to and navigating intricate situations.",
-    },
-    "The Dreamer": {
-    "traits": ["Harmonious", "Curious", "Expressive", "Contemplative", "Progressive"],
-    "fauna": ["Jellyfish", "Iguana"],
-    "description": "Dreamers are imaginative and introspective individuals who see the world through a lens of creativity and wonder.\n"
-                   "They value harmony and curiosity, often diving deeply into their thoughts to uncover new ideas and perspectives.\n"
-                   "Their progressive mindset inspires them to dream big and pursue a future filled with possibilities.",
-    },
     "The Vanguard": {
-    "traits": ["Assertive", "Stable", "Pragmatic", "Realistic", "Progressive"],
+    "traits": ["Assertive", "Curious", "Innovative", "Realistic", "Progressive"],
     "fauna": ["Anaconda", "Tiger"],
-    "description": "Vanguards are decisive and bold individuals who lead with a balance of realism and stability.\n"
-                   "They excel at creating pragmatic solutions and navigating challenges with confidence.\n"
-                   "Their progressive mindset ensures they pave the way for growth and meaningful change.",
-    },
-    "The Creator": {
-    "traits": ["Social", "Curious", "Innovative", "Flexible", "Supportive"],
-    "fauna": ["Axolotl", "Manta Ray"],
-    "description": "Creators are inventive and social individuals who thrive on curiosity and flexibility.\n"
-                   "They excel at finding innovative solutions and supporting others in collaborative environments.\n"
-                   "Their natural creativity and adaptability make them a driving force for positive change.",
-    },
-    "The Guardian": {
-    "traits": ["Reserved", "Introspective", "Pragmatic", "Realistic", "Composed"],
-    "fauna": ["Wolf", "Whale"],
-    "description": "Guardians are dependable and composed individuals who provide stability and protection.\n"
-                   "They are pragmatic thinkers with a realistic approach to life, valuing introspection and self-awareness.\n"
-                   "Their reserved nature allows them to be thoughtful decision-makers and strong pillars of support.",
-    },
-    "The Explorer": {
-    "traits": ["Social", "Curious", "Innovative", "Flexible", "Progressive"],
-    "fauna": ["Albatross", "Sea Turtle"],
-    "description": "Explorers are adventurous spirits who thrive on discovery and new experiences.\n"
-                   "Their curiosity and innovation drive them to push boundaries and embrace the unknown.\n"
-                   "Flexible and progressive, they adapt easily to challenges, making them natural trailblazers.",
-    },
-    "The Sage": {
-    "traits": ["Harmonious", "Introspective", "Compassionate", "Contemplative", "Composed"],
-    "fauna": ["Tortoise", "Heron"],
-    "description": "Sages are wise and introspective individuals who bring harmony and compassion to their environment.\n"
-                   "They are contemplative thinkers who value balance and deep reflection, seeking composed solutions.\n"
-                   "Their composed nature allows them to guide others with patience and understanding.",
-    },
-    "The Builder": {
-    "traits": ["Reserved", "Stable", "Innovative", "Realistic", "Resourceful"],
-    "fauna": ["Bison", "Orca"],
-    "description": "Builders are dependable and grounded individuals who focus on creating lasting structures and systems.\n"
-                   "They combine stability with innovative thinking, ensuring practical and realistic outcomes.\n"
-                   "Resourceful and dedicated, Builders excel in turning plans into reality through steady effort.",
-    },
-    "The Advocate": {
-    "traits": ["Assertive", "Optimistic", "Compassionate", "Ethical", "Supportive"],
-    "fauna": ["Badger", "Dolphin"],
-    "description": "Advocates are passionate and empathetic individuals who fight for justice and well-being.\n"
-                   "They combine assertiveness with compassion, ensuring their actions align with their strong moral values.\n"
-                   "Supportive and optimistic, Advocates inspire others to believe in a better world.",
+    "description": "Vanguards are bold leaders who embrace curiosity and innovation to drive meaningful change.\n"
+    "They approach challenges with realism and a progressive mindset, always pushing boundaries.\n"
+    "Their assertiveness and strategic thinking make them natural pioneers in any endeavor.\n"
     },
     "The Mediator": {
-    "traits": ["Harmonious", "Introspective", "Pragmatic", "Flexible", "Composed"],
-    "fauna": ["Seal", "Frog"],
-    "description": "Mediators are peaceful and adaptable individuals who excel at resolving conflicts and fostering understanding.\n"
-                   "They approach situations with a composed and flexible mindset, balancing introspection with practicality.\n"
-                   "Their harmonious nature helps them create connections and maintain balance in their environment.",
+        "traits": ["Social", "Introspective", "Compassionate", "Contemplative", "Supportive"],
+        "fauna": ["Seal", "Frog"],
+        "description": "Mediators are compassionate individuals who excel at fostering understanding and harmony.\n"
+        "Their introspective nature allows them to navigate complex emotions with care and thoughtfulness.\n"
+        "Supportive and contemplative, they build bridges between people, promoting lasting connections.\n"
     },
-    "The Analyst": {
-    "traits": ["Reserved", "Introspective", "Pragmatic", "Contemplative", "Resourceful"],
-    "fauna": ["Gecko", "Giraffe"],
-    "description": "Analysts are meticulous and insightful individuals who excel at breaking down complex ideas.\n"
-                   "Their pragmatic and contemplative approach allows them to uncover hidden patterns and solutions.\n"
-                   "With a resourceful mindset, they thrive in situations requiring deep thought and analysis.",
+    "The Strategist": {
+        "traits": ["Harmonious", "Stable", "Innovative", "Contemplative", "Supportive"],
+        "fauna": ["Lynx", "Raven"],
+        "description": "Strategists are thoughtful planners who combine stability with innovative thinking.\n"
+        "They approach problems with a harmonious mindset, ensuring well-rounded and supportive solutions.\n"
+        "Their contemplative nature helps them see the bigger picture while maintaining attention to detail.\n"
     },
-    "The Performer": {
-    "traits": ["Social", "Curious", "Expressive", "Ethical", "Composed"],
-    "fauna": ["Toucan", "Chameleon"],
-    "description": "Performers are vibrant and engaging individuals who thrive on creativity and self-expression.\n"
-                   "Their social nature and curiosity allow them to connect deeply with others and explore new ideas.\n"
-                   "With a composed demeanor and ethical approach, they bring positivity and inspiration to any situation.",
-    },
-    "The Philosopher": {
-    "traits": ["Reserved", "Introspective", "Expressive", "Contemplative", "Composed"],
-    "fauna": ["Crow", "Octopus"],
-    "description": "Philosophers are deep thinkers who seek meaning and understanding in all aspects of life.\n"
-                   "They are introspective and composed, often expressing their thoughts in creative and impactful ways.\n"
-                   "With a contemplative nature, they inspire others to reflect and find clarity in complexity.",
-    },
-    "The Free Spirit": {
-    "traits": ["Harmonious", "Curious", "Expressive", "Flexible", "Supportive"],
-    "fauna": ["Horse", "Parrot"],
-    "description": "Free Spirits are independent thinkers who value harmony and self-expression.\n"
-                   "They embrace curiosity and flexibility, thriving in environments that encourage creativity and individuality.\n"
-                   "Supportive and open-minded, they inspire others to live authentically and pursue their passions."
-    },
-    "The Pioneer": {
-    "traits": ["Assertive", "Optimistic", "Innovative", "Ethical", "Supportive"],
-    "fauna": ["Shark", "Eagle"],
-    "description": "Pioneers are trailblazers driven by assertiveness and optimism to explore uncharted territories.\n"
-                   "Their innovative spirit and ethical grounding enable them to inspire others and tackle challenges head-on.\n"
-                   "Supportive and bold, they lead with courage and determination, making them natural adventurers and leaders."
-    },
-    "The Diplomat": {
-    "traits": ["Social", "Stable", "Compassionate", "Flexible", "Resourceful"],
-    "fauna": ["Elephant", "Penguin"],
-    "description": "Diplomats are natural peacemakers who prioritize stability and understanding in their relationships.\n"
-                   "They are compassionate and flexible, navigating conflicts with grace and adaptability.\n"
-                   "Resourceful and socially adept, they build strong connections and foster harmony in their communities."
-    },
-    "The Investigator": {
-    "traits": ["Assertive", "Stable", "Pragmatic", "Realistic", "Resourceful"],
-    "fauna": ["Electric Eel", "Alligator"],
-    "description": "Investigators are analytical and practical individuals who excel at uncovering the truth.\n"
-                   "They combine assertiveness with a grounded approach, ensuring their actions are both effective and realistic.\n"
-                   "Resourceful and stable, they thrive in navigating complexities and solving intricate problems."
+    "The Advocate": {
+        "traits": ["Reserved", "Curious", "Compassionate", "Ethical", "Progressive"],
+        "fauna": ["Badger", "Dolphin"],
+        "description": "Advocates are driven by a strong ethical compass and a desire to bring about positive change.\n"
+        "They balance their reserved nature with compassionate action, standing up for what they believe in.\n"
+        "Their progressive mindset and curiosity fuel their passion for justice and equality.\n"
     },
     "The Achiever": {
-    "traits": ["Assertive", "Optimistic", "Expressive", "Flexible", "Progressive"],
-    "fauna": ["Cobra", "Falcon"],
-    "description": "Achievers are driven individuals who combine optimism with assertiveness to reach their goals.\n"
-                   "They are adaptable and expressive, using their creativity and flexibility to overcome challenges.\n"
-                   "Their progressive mindset fuels their determination to succeed and inspire others."
+        "traits": ["Assertive", "Optimistic", "Innovative", "Flexible", "Supportive"],
+        "fauna": ["Cobra", "Falcon"],
+        "description": "Achievers are dynamic and optimistic individuals who thrive on reaching new heights.\n"
+        "Their innovative spirit and flexibility allow them to adapt to any challenge with confidence.\n"
+        "Supportive of others, they inspire those around them with their assertiveness and determination.\n"
+    },
+    "The Diplomat": {
+    "traits": ["Social", "Curious", "Pragmatic", "Realistic", "Supportive"],
+    "fauna": ["Elephant", "Penguin"],
+    "description": "Diplomats are natural connectors who balance curiosity with pragmatic problem-solving.\n"
+    "Their realistic approach helps them navigate complex social dynamics with ease.\n"
+    "Supportive and adaptable, they build strong relationships rooted in mutual respect.\n"
+    },
+    "The Analyst": {
+        "traits": ["Harmonious", "Curious", "Pragmatic", "Contemplative", "Resourceful"],
+        "fauna": ["Gecko", "Giraffe"],
+        "description": "Analysts are insightful thinkers who approach problems with curiosity and pragmatism.\n"
+        "They value harmony and contemplation.\nThis allows them to uncover hidden solutions.\n"
+        "Resourceful and thoughtful, they excel at analyzing complex situations with clarity.\n"
+    },
+    "The Performer": {
+        "traits": ["Assertive", "Stable", "Expressive", "Realistic", "Composed"],
+        "fauna": ["Toucan", "Chameleon"],
+        "description": "Performers are confident and expressive individuals who captivate those around them.\n"
+        "Their stable and realistic nature grounds their creative energy.\nThis makes them reliable leaders.\n"
+        "With a composed demeanor, they inspire others through both action and presence.\n"
+    },
+    "The Free Spirit": {
+        "traits": ["Social", "Curious", "Expressive", "Flexible", "Progressive"],
+        "fauna": ["Horse", "Parrot"],
+        "description": "Free Spirits are adventurous souls who thrive on social connection and self-expression.\n"
+        "Their curiosity and flexibility allow them to adapt to new experiences with ease.\n"
+        "Progressive and open-minded, they inspire others to embrace authenticity and growth.\n"
+    },
+    "The Visionary": {
+        "traits": ["Reserved", "Optimistic", "Innovative", "Realistic", "Resourceful"],
+        "fauna": ["Cheetah", "Newt"],
+        "description": "Visionaries are forward-thinking individuals who blend optimism with innovation.\n"
+        "Their realistic mindset ensures practical solutions to complex challenges.\n"
+        "Resourceful and driven, they inspire others to imagine and build a better future.\n"
+    },
+    "The Builder": {
+    "traits": ["Social", "Stable", "Pragmatic", "Flexible", "Resourceful"],
+    "fauna": ["Bison", "Orca"],
+    "description": "Builders are dependable individuals who create lasting foundations through practical solutions.\n"
+    "They combine stability with flexibility, adapting to challenges with ease.\n"
+    "Resourceful and social, they excel in collaborative environments where steady progress is key.\n"
+    },
+    "The Dreamer": {
+        "traits": ["Harmonious", "Optimistic", "Expressive", "Ethical", "Supportive"],
+        "fauna": ["Jellyfish", "Iguana"],
+        "description": "Dreamers are imaginative souls who see the world through a lens of optimism and creativity.\n"
+        "Their expressive nature and strong ethical values inspire those around them.\n"
+        "Supportive and harmonious, they encourage others to pursue their dreams with confidence.\n"
+    },
+    "The Guardian": {
+        "traits": ["Assertive", "Stable", "Compassionate", "Flexible", "Progressive"],
+        "fauna": ["Wolf", "Whale"],
+        "description": "Guardians are strong protectors who balance assertiveness with compassion.\n"
+        "Their stable and flexible nature allows them to support others through change.\n"
+        "Progressive and caring, they lead by example, fostering growth and security.\n"
+    },
+    "The Sage": {
+        "traits": ["Harmonious", "Introspective", "Compassionate", "Contemplative", "Composed"],
+        "fauna": ["Tortoise", "Heron"],
+        "description": "Sages are wise and introspective individuals who bring harmony and understanding to their environment.\n"
+        "They approach life with compassion and a contemplative mindset.\n"
+        "Composed and thoughtful, they guide others through reflection and calm presence.\n"
+    },
+    "The Creator": {
+        "traits": ["Reserved", "Introspective", "Innovative", "Ethical", "Composed"],
+        "fauna": ["Axolotl", "Manta Ray"],
+        "description": "Creators are inventive thinkers who merge introspection with innovation.\n"
+        "Their ethical values guide their creative pursuits, ensuring meaningful impact.\n"
+        "Composed and reserved, they bring thoughtful solutions to life through careful design.\n"
+    },
+    "The Philosopher": {
+    "traits": ["Reserved", "Optimistic", "Expressive", "Contemplative", "Resourceful"],
+    "fauna": ["Crow", "Octopus"],
+    "description": "Philosophers are deep thinkers who blend optimism with thoughtful reflection.\n"
+    "Their expressive nature allows them to share profound insights with the world.\n"
+    "Resourceful and reserved, they seek meaning and clarity in all aspects of life.\n"
+    },
+    "The Explorer": {
+        "traits": ["Social", "Introspective", "Expressive", "Flexible", "Composed"],
+        "fauna": ["Albatross", "Sea Turtle"],
+        "description": "Explorers are adventurous souls who thrive on discovering new experiences and perspectives.\n"
+        "Their introspective and expressive nature helps them connect deeply with others and themselves.\n"
+        "Flexible and composed, they navigate life’s journeys with confidence and grace.\n"
+    },
+    "The Investigator": {
+        "traits": ["Reserved", "Stable", "Compassionate", "Realistic", "Composed"],
+        "fauna": ["Electric Eel", "Alligator"],
+        "description": "Investigators are meticulous and compassionate individuals who seek to uncover hidden truths.\n"
+        "Their stable and realistic mindset grounds their explorations in practical outcomes.\n"
+        "Reserved yet composed, they approach every challenge with thoughtful precision.\n"
+    },
+    "The Nurturer": {
+        "traits": ["Assertive", "Introspective", "Pragmatic", "Ethical", "Resourceful"],
+        "fauna": ["Swan", "Deer"],
+        "description": "Nurturers are caring and assertive individuals who balance introspection with practical support.\n"
+        "Their strong ethical foundation guides their compassionate actions.\n"
+        "Resourceful and pragmatic, they help others grow and thrive in meaningful ways.\n"
+    },
+    "The Pioneer": {
+        "traits": ["Harmonious", "Optimistic", "Pragmatic", "Ethical", "Progressive"],
+        "fauna": ["Shark", "Eagle"],
+        "description": "Pioneers are trailblazers driven by harmony and optimism as they forge new paths.\n"
+        "Their pragmatic and ethical approach ensures lasting, positive impact.\n"
+        "Progressive and fearless, they inspire others to embrace change and innovation.\n"
     }
 }
 
+# Animal traits assignment
 animal_traits = {
-    # Herpetofauna
-    "Chameleon": {"primary_trait": "Curious", "secondary_trait": "Composed"},
-    "Tortoise": {"primary_trait": "Contemplative", "secondary_trait": "Compassionate"},
-    "Cobra": {"primary_trait": "Flexible", "secondary_trait": "Assertive"},
-    "Gecko": {"primary_trait": "Introspective", "secondary_trait": "Resourceful"},
-    "Iguana": {"primary_trait": "Contemplative", "secondary_trait": "Curious"},
-    "Alligator": {"primary_trait": "Assertive", "secondary_trait": "Realistic"},
-    "Anaconda": {"primary_trait": "Realistic", "secondary_trait": "Stable"},
-    "Newt": {"primary_trait": "Ethical", "secondary_trait": "Expressive"},
-    "Frog": {"primary_trait": "Flexible", "secondary_trait": "Composed"},
-    "Axolotl": {"primary_trait": "Social", "secondary_trait": "Innovative"},
+    #Mammalifauna
+    "Tiger": {"primary_trait": "Innovative", "secondary_trait": "Progressive"},
+    "Cheetah": {"primary_trait": "Innovative", "secondary_trait": "Resourceful"},
+    "Horse": {"primary_trait": "Progressive", "secondary_trait": "Expressive"},
+    "Lynx": {"primary_trait": "Innovative", "secondary_trait": "Contemplative"},
+    "Giraffe": {"primary_trait": "Resourceful", "secondary_trait": "Contemplative"},
+    "Badger": {"primary_trait": "Ethical", "secondary_trait": "Compassionate"},
+    "Wolf": {"primary_trait": "Flexible", "secondary_trait": "Stable"},
+    "Deer": {"primary_trait": "Resourceful", "secondary_trait": "Ethical"},
+    "Elephant": {"primary_trait": "Supportive", "secondary_trait": "Realistic"},
+    "Bison": {"primary_trait": "Resourceful", "secondary_trait": "Social"},
 
-    # Mammalia
-    "Tiger": {"primary_trait": "Assertive", "secondary_trait": "Progressive"},
-    "Elephant": {"primary_trait": "Compassionate", "secondary_trait": "Stable"},
-    "Bison": {"primary_trait": "Stable", "secondary_trait": "Reserved"},
-    "Lynx": {"primary_trait": "Reserved", "secondary_trait": "Contemplative"},
-    "Giraffe": {"primary_trait": "Pragmatic", "secondary_trait": "Contemplative"},
-    "Cheetah": {"primary_trait": "Progressive", "secondary_trait": "Optimistic"},
-    "Wolf": {"primary_trait": "Introspective", "secondary_trait": "Realistic"},
-    "Horse": {"primary_trait": "Supportive", "secondary_trait": "Expressive"},
-    "Deer": {"primary_trait": "Supportive", "secondary_trait": "Ethical"},
-    "Badger": {"primary_trait": "Assertive", "secondary_trait": "Ethical"},
+    #Avifauna
+    "Falcon": {"primary_trait": "Assertive", "secondary_trait": "Supportive"},
+    "Raven": {"primary_trait": "Stable", "secondary_trait": "Supportive"},
+    "Penguin": {"primary_trait": "Social", "secondary_trait": "Pragmatic"},
+    "Eagle": {"primary_trait": "Pragmatic", "secondary_trait": "Progressive"},
+    "Heron": {"primary_trait": "Compassionate", "secondary_trait": "Harmonious"},
+    "Toucan": {"primary_trait": "Composed", "secondary_trait": "Stable"},
+    "Swan": {"primary_trait": "Assertive", "secondary_trait": "Pragmatic"},
+    "Crow": {"primary_trait": "Optimistic", "secondary_trait": "Contemplative"},
+    "Parrot": {"primary_trait": "Flexible", "secondary_trait": "Curious"},
+    "Albatross": {"primary_trait": "Introspective", "secondary_trait": "Composed"},
 
-    # Ichthyofauna
-    "Dolphin": {"primary_trait": "Supportive", "secondary_trait": "Optimistic"},
-    "Orca": {"primary_trait": "Resourceful", "secondary_trait": "Innovative"},
-    "Seal": {"primary_trait": "Introspective", "secondary_trait": "Pragmatic"},
-    "Electric Eel": {"primary_trait": "Pragmatic", "secondary_trait": "Stable"},
-    "Manta Ray": {"primary_trait": "Supportive", "secondary_trait": "Flexible"},
-    "Sea Turtle": {"primary_trait": "Social", "secondary_trait": "Curious"},
-    "Shark": {"primary_trait": "Assertive", "secondary_trait": "Innovative"},
-    "Jellyfish": {"primary_trait": "Expressive", "secondary_trait": "Harmonious"},
-    "Octopus": {"primary_trait": "Composed", "secondary_trait": "Reserved"},
-    "Whale": {"primary_trait": "Pragmatic", "secondary_trait": "Composed"},
+    #Ichtyofauna
+    "Dolphin": {"primary_trait": "Reserved", "secondary_trait": "Curious"},
+    "Orca": {"primary_trait": "Stable", "secondary_trait": "Pragmatic"},
+    "Jellyfish": {"primary_trait": "Harmonious", "secondary_trait": "Supportive"},
+    "Manta Ray": {"primary_trait": "Reserved", "secondary_trait": "Composed"},
+    "Whale": {"primary_trait": "Compassionate", "secondary_trait": "Assertive"},
+    "Seal": {"primary_trait": "Compassionate", "secondary_trait": "Introspective"},
+    "Octopus": {"primary_trait": "Reserved", "secondary_trait": "Expressive"},
+    "Shark": {"primary_trait": "Optimistic", "secondary_trait": "Ethical"},
+    "Sea Turtle": {"primary_trait": "Expressive", "secondary_trait": "Social"},
+    "Electric Eel": {"primary_trait": "Composed", "secondary_trait": "Realistic"},
 
-    # Avifauna
-    "Eagle": {"primary_trait": "Ethical", "secondary_trait": "Optimistic"},
-    "Albatross": {"primary_trait": "Progressive", "secondary_trait": "Innovative"},
-    "Crow": {"primary_trait": "Contemplative", "secondary_trait": "Expressive"},
-    "Raven": {"primary_trait": "Resourceful", "secondary_trait": "Innovative"},
-    "Heron": {"primary_trait": "Composed", "secondary_trait": "Introspective"},
-    "Toucan": {"primary_trait": "Expressive", "secondary_trait": "Social"},
-    "Parrot": {"primary_trait": "Curious", "secondary_trait": "Expressive"},
-    "Penguin": {"primary_trait": "Social", "secondary_trait": "Resourceful"},
-    "Swan": {"primary_trait": "Harmonious", "secondary_trait": "Compassionate"},
-    "Falcon": {"primary_trait": "Optimistic", "secondary_trait": "Progressive"}
+    #Herpetofauna
+    "Frog": {"primary_trait": "Supportive", "secondary_trait": "Contemplative"},
+    "Axolotl": {"primary_trait": "Innovative", "secondary_trait": "Ethical"},
+    "Newt": {"primary_trait": "Realistic", "secondary_trait": "Reserved"},
+    "Tortoise": {"primary_trait": "Contemplative", "secondary_trait": "Composed"},
+    "Chameleon": {"primary_trait": "Assertive", "secondary_trait": "Realistic"},
+    "Alligator": {"primary_trait": "Compassionate", "secondary_trait": "Reserved"},
+    "Anaconda": {"primary_trait": "Curious", "secondary_trait": "Assertive"},
+    "Cobra": {"primary_trait": "Flexible", "secondary_trait": "Innovative"},
+    "Gecko": {"primary_trait": "Harmonious", "secondary_trait": "Pragmatic"},
+    "Iguana": {"primary_trait": "Ethical", "secondary_trait": "Expressive"},
 }
 
 # Dictionary for questions related to "Social Orientation"
@@ -1152,7 +1153,6 @@ import os
 import random
 import matplotlib.pyplot as plt
 import numpy as np
-import random
 
 # Mock input function for automated testing
 def mock_input(lower, upper):
