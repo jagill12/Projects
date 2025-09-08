@@ -1,0 +1,10 @@
+max
+gregor
+1987-12-15
+male
+999 last dr
+321-123-6545
+max@gregor.org
+AB+
+987-78-9856
+12
