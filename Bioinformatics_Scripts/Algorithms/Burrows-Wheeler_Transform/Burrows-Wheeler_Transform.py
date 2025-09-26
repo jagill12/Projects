@@ -28,7 +28,7 @@ def cal_occur(bwt_string: str) -> dict[str, list[int]]:
     for i, char in enumerate(bwt_string):
         if i > 0:
             for key in occur:
-                occur[key][i] = occur[key][i - 1]  
+                occur[key][i] = occur[key][i - 1]
         occur[char][i] += 1
     
     return occur
@@ -40,14 +40,17 @@ def update_range(
     occur: dict[str, list[int]], 
     a: str
 ) -> tuple[int, int]:
-    """Update the range given character a."""
+    """Update the range given character a (LF mapping)."""
     if a not in count:
         return -1, -1
+    # Clamp upper just in case
     if upper >= len(occur[a]):
-        upper = len(occur[a]) -1
+        upper = len(occur[a]) - 1
 
+    # Standard FM-index backward step (Occ is inclusive):
+    # [lower, upper] becomes [C[a] + Occ(a, lower-1), C[a] + Occ(a, upper) - 1]
     new_lower = count[a] + (occur[a][lower - 1] if lower > 0 else 0)
-    new_upper = count[a] + occur[a][upper]
+    new_upper = count[a] + occur[a][upper] - 1
 
     return (new_lower, new_upper) if new_lower <= new_upper else (-1, -1)
 
@@ -73,8 +76,8 @@ def find_match(query: str, reference: str) -> list[int]:
     raw_matches = suffix_positions[lower:upper + 1]
     print(f"Raw match positions {raw_matches}")
 
-
-    matches = sorted(pos for pos in raw_matches if pos > 0 and pos < len(reference) - 1)
+    # Allow matches at position 0; exclude only the sentinel at the last index
+    matches = sorted(pos for pos in raw_matches if pos < len(reference) - 1)
 
     print(f"Final match positions: {matches}")
     print("Burrows-Wheeler Transform:", bwt_string)
@@ -86,5 +89,6 @@ def main():
     reference = input("Enter the reference string: ") + "$"
     query = input("Enter the query string: ")
     find_match(query, reference)
+
 if __name__ == "__main__":
     main()
