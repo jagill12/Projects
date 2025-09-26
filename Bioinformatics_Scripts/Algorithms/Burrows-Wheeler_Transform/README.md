@@ -52,26 +52,3 @@ python Burrows-Wheeler_Transform.py
 
 python
 Copy code
-
-Within the script:
-```python
-from Burrows-Wheeler_Transform import find_match
-find_match("ana", "banana$")
-# -> [1, 3]
-Applications
-Read alignment in bioinformatics
-
-Full-text search in search engines
-
-Data compression
-
-Efficient storage and retrieval in version-control systems
-
-Future Improvements
-Add command-line arguments for easier automation.
-
-Add tests and example datasets.
-
-Extend to handle mismatches and gaps.
-
-Copy code
