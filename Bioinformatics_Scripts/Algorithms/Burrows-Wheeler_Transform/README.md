@@ -36,19 +36,3 @@ sql
 Copy code
 
 The script appends `$` to the reference (`banana$`), builds the suffix array and BWT, and searches the query from right to left. The positions it returns are `1` and `3`, where `ana` occurs in the reference.
-
-## Installation
-Clone the repository or copy the script into your project. No external dependencies are required beyond Python’s standard library.
-
-git clone https://github.com/yourusername/Projects.git
-cd Projects/Bioinformatics_Scripts/Algorithms/Burrows-Wheeler_Transform
-
-shell
-Copy code
-
-## Usage
-Interactive run:
-python Burrows-Wheeler_Transform.py
-
-python
-Copy code
