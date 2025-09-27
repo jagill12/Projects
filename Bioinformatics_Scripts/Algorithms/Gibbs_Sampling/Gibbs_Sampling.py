@@ -75,31 +75,28 @@ def GibbsMotifFinder(seqs, k, seed=42, iterations=1000, convergence_threshold=0.
     
     return pfm
 
-# Here we test your Gibbs sampler.
-# You do not need to edit this or the section below. This is the Driver program
+def main():
+    # Read promoters and store in a list of strings
+    seq_file = "GCF_000009045.1_ASM904v1_genomic.fna"
+    gff_file = "GCF_000009045.1_ASM904v1_genomic.gff"
 
-#read promoters, store in a list of strings
-seq_file="GCF_000009045.1_ASM904v1_genomic.fna"
-gff_file="GCF_000009045.1_ASM904v1_genomic.gff"
+    seqs = []
 
-seqs = []
+    for name, seq in get_fasta(seq_file):
+        for gff_entry in get_gff(gff_file):
+            if gff_entry.type == 'CDS':
+                promoter_seq = get_seq(seq, gff_entry.start, gff_entry.end, gff_entry.strand, 50)
+                
+                # Pre-filter for sequences that contain part of the Shine-Dalgarno motif
+                if "AGGAGG" in promoter_seq:
+                    seqs.append(promoter_seq)
 
-for name, seq in get_fasta(seq_file): # For each entry in our FASTA file
-    for gff_entry in get_gff(gff_file): # For each entry in our GFF file
-        if gff_entry.type == 'CDS': # If this is a coding sequence
-            promoter_seq = get_seq(seq, gff_entry.start, gff_entry.end, gff_entry.strand, 50) # Extract 50 bp as a promoter
-    
-            """
-            Because the gibbs sampling assumption is broken in just using promoters,
-            and because it takes very long time to randomly progress through so many
-            regions, for this example we will pre-filter for sequences that all contain
-            part of the shine-dalgarno motif:
-            """
-            if "AGGAGG" in promoter_seq:
-                seqs.append(promoter_seq)
+    # Run the Gibbs sampler
+    promoter_pfm = GibbsMotifFinder(seqs, 10)
 
-# Run the gibbs sampler:
-promoter_pfm = GibbsMotifFinder(seqs,10)
+    # Plot the final PFM that is generated
+    seqlogo.seqlogo(seqlogo.CompletePm(pfm=promoter_pfm.T), format='png', filename="motif_logo.png")
 
-# Plot the final pfm that is generated: 
-seqlogo.seqlogo(seqlogo.CompletePm(pfm=promoter_pfm.T), format='png', filename="motif_logo.png")
+
+if __name__ == "__main__":
+    main()
