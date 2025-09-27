@@ -51,7 +51,12 @@ class DeBruijnGraph():
         print(tour)
         return tour
 
-dbg = DeBruijnGraph("fool me once shame on shame on you fool me", 6)
-walk = dbg.print_eulerian_walk()
-reconstructed_string = walk[0] + ''.join(map(lambda x: x[-1], walk[1:]))
-print(reconstructed_string)
+def main():
+    dbg = DeBruijnGraph("fool me once shame on shame on you fool me", 6)
+    walk = dbg.print_eulerian_walk()
+    reconstructed_string = walk[0] + ''.join(map(lambda x: x[-1], walk[1:]))
+    print(reconstructed_string)
+
+
+if __name__ == "__main__":
+    main()
