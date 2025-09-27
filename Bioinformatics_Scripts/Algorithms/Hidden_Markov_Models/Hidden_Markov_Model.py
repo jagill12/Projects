@@ -188,58 +188,62 @@ class HiddenMarkovModel:
         return self.init_probs, self.trans_probs, self.emit_probs
     
 # ------------------- MAIN SECTION -------------------
+def main():
+    #Observation sequence
+    obs_sequence = "GGCACTGAA"
 
-#Observation sequence
-obs_sequence = "GGCACTGAA"
+    #States and observations
+    states = ["I", "R"]
+    observations = ["A", "C", "G", "T"]
 
-#States and observations
-states = ["I", "R"]
-observations = ["A", "C", "G", "T"]
+    #Initial, transition, and emission probabilities
+    init_probs = {
+        "I": 0.2,
+        "R": 0.8
+    }
 
-#Initial, transition, and emission probabilities
-init_probs = {
-    "I": 0.2,
-    "R": 0.8
-}
+    trans_probs = {
+        "I": {"I": 0.7, "R": 0.3},
+        "R": {"I": 0.1, "R": 0.9}
+    }
 
-trans_probs = {
-    "I": {"I": 0.7, "R": 0.3},
-    "R": {"I": 0.1, "R": 0.9}
-}
+    emit_probs = {
+        "I": {"A": 0.1, "C": 0.4, "G": 0.4, "T": 0.1},
+        "R": {"A": 0.3, "C": 0.2, "G": 0.2, "T": 0.3}
+    }
 
-emit_probs = {
-    "I": {"A": 0.1, "C": 0.4, "G": 0.4, "T": 0.1},
-    "R": {"A": 0.3, "C": 0.2, "G": 0.2, "T": 0.3}
-}
+    #Create model
+    model = HiddenMarkovModel(states, observations, init_probs, trans_probs, emit_probs)
 
-#Create model
-model = HiddenMarkovModel(states, observations, init_probs, trans_probs, emit_probs)
+    # ---- Run Viterbi BEFORE training ----
+    viterbi_path, viterbi_prob = model.viterbi(obs_sequence)
+    print("Most Likely Viterbi Path (Before Training):", viterbi_path)
+    print("Probability of Viterbi Path:", viterbi_prob)
 
-# ---- Run Viterbi BEFORE training ----
-viterbi_path, viterbi_prob = model.viterbi(obs_sequence)
-print("Most Likely Viterbi Path (Before Training):", viterbi_path)
-print("Probability of Viterbi Path:", viterbi_prob)
+    # ---- Run Forward-Backward ----
+    state_probs = model.forward_backward(obs_sequence)
+    df_probs = pd.DataFrame({
+        'Observation': [f'Obs {i+1}' for i in range(state_probs.shape[1])],
+        'I': state_probs[0],
+        'R': state_probs[1]
+    }).set_index('Observation')
 
-# ---- Run Forward-Backward ----
-state_probs = model.forward_backward(obs_sequence)
-df_probs = pd.DataFrame({
-    'Observation': [f'Obs {i+1}' for i in range(state_probs.shape[1])],
-    'I': state_probs[0],
-    'R': state_probs[1]
-}).set_index('Observation')
+    print("\nForward-Backward State Probabilities:")
+    print(df_probs)
 
-print("\nForward-Backward State Probabilities:")
-print(df_probs)
+    # ---- Run Baum-Welch Training ----
+    model.baum_welch(obs_sequence, n_iter=10)
 
-# ---- Run Baum-Welch Training ----
-model.baum_welch(obs_sequence, n_iter=10)
+    print("\n--- After Baum-Welch Training ---")
+    print("Updated Initial Probabilities:", model.init_probs)
+    print("Updated Transition Probabilities:", model.trans_probs)
+    print("Updated Emission Probabilities:", model.emit_probs)
 
-print("\n--- After Baum-Welch Training ---")
-print("Updated Initial Probabilities:", model.init_probs)
-print("Updated Transition Probabilities:", model.trans_probs)
-print("Updated Emission Probabilities:", model.emit_probs)
+    # ---- Run Viterbi AGAIN AFTER training ----
+    viterbi_path_trained, viterbi_prob_trained = model.viterbi(obs_sequence)
+    print("\nMost Likely Viterbi Path (After Training):", viterbi_path_trained)
+    print("Probability of Viterbi Path:", viterbi_prob_trained)
 
-# ---- Run Viterbi AGAIN AFTER training ----
-viterbi_path_trained, viterbi_prob_trained = model.viterbi(obs_sequence)
-print("\nMost Likely Viterbi Path (After Training):", viterbi_path_trained)
-print("Probability of Viterbi Path:", viterbi_prob_trained)
+
+if __name__ == "__main__":
+    main()
