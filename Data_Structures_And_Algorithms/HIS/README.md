@@ -105,20 +105,20 @@ Compile using:
 
 ## Running
 ./his
-You will be presented with a menu allowing:
+  - You will be presented with a menu allowing:
 1. Patient/Employee data management
 2. Patient check-in (priority queue)
 3. Queue processing
 4. Exit and cleanup
 
 ## Example Complexity
-Operation                Complexity
-Patient search           O(log n)
-Patient insert/delete    O(log n)
-Department lookup        O(d)
-Queue enqueue            O(n)
-Queue dequeue            O(1)
-Tree traversal           O(n)
+  - Operation                Complexity
+  - Patient search           O(log n)
+  - Patient insert/delete    O(log n)
+  - Department lookup        O(d)
+  - Queue enqueue            O(n)
+  - Queue dequeue            O(1)
+  - Tree traversal           O(n)
 
 ## Educational Goals
 This project was built to demonstrate my understanding of the practical application of balanced trees, manual memory management, hybrid data structure design, algorithmic performance guarantees, systems-level file handling, and CLI-driven
