@@ -12,18 +12,21 @@ This project was written in standard C and has minimal external requirements. It
   GCC or Microsoft Visual Studio C compiler (MSVC)
   
 ## Required Libraries
-### Standard C Libraries
-  stdio.h
-  stdlib.h
-  string.h
-  errno.h
-  sys/types.h
-  sys/stat.h
 
-### Windows API (Platform Requirement)
+## Windows API (Platform Requirement)
   - windows.h
-  - WIN32 directory traversal functions (FindFirstFile, FindNextFile)
-  - _mkdir directory creation
+  - WIN32_FIND_DATA
+  - FindFirstFile/FindNextFile
+  - _mkdir
+  - Windows directory handling
+
+## Standard C Libraries
+  - stdio.h
+  - stdlib.h
+  - string.h
+  - errno.h
+  - sys/types.h
+  - sys/stat.h
 
 ## Overview
 This system simulates a simple electronic healthcare record environment. In it: patients and employees are stored as structured records, which are indexed using balanced search trees; employees are stored by department, which 
