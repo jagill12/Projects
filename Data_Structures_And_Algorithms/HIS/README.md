@@ -87,7 +87,7 @@ Instead of a database, records are persisted as directories, which demonstrates 
   - Recursive cleanup on deletion.
 
 ## Program Architecture
-
+```
 main()
   Load filesystem data
     Patient AVL Tree
@@ -97,7 +97,7 @@ main()
     Patient Check-In
     Queue Processing
 Memory Cleanup
-
+```
 ## Compilation
 This project is written in C and uses Windows filesystem APIs.
 Compile using:
