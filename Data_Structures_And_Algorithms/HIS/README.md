@@ -30,7 +30,7 @@ This project was written in standard C and has minimal external requirements. It
 
 ## Overview
 This system simulates a simple electronic healthcare record environment. In it: patients and employees are stored as structured records, which are indexed using balanced search trees; employees are stored by department, which 
-dynamically organize employees; patients are checked into the ER using a priority queue triage that orders them by severity and time, if multiple patients have the same severity; and ensures all data persists are structured 
+dynamically organize employees; patients are checked into the ER using a priority queue triage that orders them by severity and time, if multiple patients have the same severity; and ensures all data persists as structured 
 directories and files, which are .txt files in this project for the sake of demonstration.
 
 The specified file path which houses all patient and employee data is automatically, recursively read upon launching the program such that all patients and employees that have been saved from previous runs are loaded into working memory.
