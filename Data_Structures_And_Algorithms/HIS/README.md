@@ -133,7 +133,7 @@ Possible Extensions
   - REST API interface
   - GUI frontend
   - Access logging for security purposes
-  - 
+    
 # Author
 John Gill
 M.S. Bioinformatics - Northeastern University
