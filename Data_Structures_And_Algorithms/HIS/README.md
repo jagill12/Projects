@@ -1,6 +1,6 @@
 # Healthcare Information System (HIS)
-## Language: C
-## AVL Tree-Backed Patient and Employee Management System in C
+
+## AVL Tree-Backed Patient and Employee Management System
 This is a command-line Healthcare Information System implemented in pure C, which is designed to demonstrate my aptitude with practical applacations of classic data structures and algorithms in a real-world setting.
 
 This project manages patient and employee records using self-balancing AVL trees, supports department organization, and implements a severity-based patient "ER" queue while persisting all added/edited data directly to the file system.
@@ -14,18 +14,18 @@ This project was written in standard C and has minimal external requirements. It
 ## Required Libraries
 ### Standard C Libraries
   Included with any compliant C compiler:
-    stdio.h
-    stdlib.h
-    string.h
-    errno.h
-    sys/types.h
-    sys/stat.h
+    - stdio.h
+    - stdlib.h
+    - string.h
+    - errno.h
+    - sys/types.h
+    - sys/stat.h
 
 ### Windows API (Platform Requirement)
   This project currently relies on Windows filesystem APIs:
-    windows.h
-    WIN32 directory traversal functions (FindFirstFile, FindNextFile)
-    _mkdir directory creation
+    - windows.h
+    - WIN32 directory traversal functions (FindFirstFile, FindNextFile)
+    - _mkdir directory creation
 
 ## Overview
 This system simulates a simple electronic healthcare record environment. In it: patients and employees are stored as structured records, which are indexed using balanced search trees; employees are stored by department, which 
