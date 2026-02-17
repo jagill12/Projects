@@ -1,3 +1,5 @@
+from pathlib import Path
+
 distanceMatrix = [
     [0, 12, 12, 13, 15, 15],
     [12, 0, 2, 6, 8, 8],
@@ -60,6 +62,10 @@ def updateMatrix(dM, row, col):
     
     return newMat
 
-output_file = "C:/Users/johna/OneDrive/Documents/BINF 6400/Problem Set 4/John_Gill_UPGMA_output.txt"
+BASE_DIR = Path(__file__).resolve().parent
+OUTPUT_DIR = BASE_DIR / "outputs"
+OUTPUT_DIR.mkdir(exist_ok=True)
+
+output_file = OUTPUT_DIR / "John_Gill_UPGMA_output.txt"
 final_tree = UPGMA(distanceMatrix, speciesList, output_file)
 print(f"Final tree has been written to {output_file}.")
