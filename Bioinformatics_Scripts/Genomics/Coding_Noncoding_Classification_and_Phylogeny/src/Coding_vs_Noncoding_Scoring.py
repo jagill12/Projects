@@ -1,18 +1,6 @@
 import math
 from pathlib import path
 
-'''John Gill: Genomics in Bioinformatics - Project 4 pt.1: Coding/Noncoding Matrices.
-    This program reads in a number of .fasta files as well as a coding and a noncoding
-    matrix file. The coding and noncoding matrix files consist of codon scores that are
-    mapped to the modelCodons list in this script. Coding and noncoding scores are each saved
-    into memory from their respective files, then sequences of two species are read per codon. The first is an
-    ancestral species, and the second is a descendent species. Those codons from each file are compared to 
-    a score in the coding and noncoding files based on the row (as the first species's codon at that index) and
-    the column (as the second species's codon at that index). The score for each is then added to two growing
-    scores for every codon for each ID between the two species files: one for coding probabilities, and 
-    one for noncoding probabilities. Then the largest score is saved and used to determine whether that
-    ID between those two species represents coding or noncoding.'''
-
 BASE_DIR = Path(__file__).resolve().parent 
 
 ancestor_path = BASE_DIR / "Ancestor.fa"
