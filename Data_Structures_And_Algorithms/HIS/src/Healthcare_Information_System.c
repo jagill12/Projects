@@ -9,6 +9,7 @@
 #include <sys/stat.h> //Used for obtaining information about files and directories.
 #include <errno.h> //Defines macros for reporting and retrieving error codes.
 
+#define DATA_ROOT "./example_data"
 #define MAX_NAME_LENGTH 100
 #define MAX_ADDRESS_LENGTH 200
 #define MAX_PHONE_LENGTH 15
@@ -463,8 +464,8 @@ PatientNode* deletePatient(PatientNode* root, const char* firstName, const char*
 
             //Remove the directory corresponding to the patient.
             char basePath[MAX_LINE_LENGTH];
-            snprintf(basePath, sizeof(basePath), "C:/Users/johna/OneDrive/Documents/CS 5008/Final Project/HIS data/Patients/%s_%s",
-                     firstName, lastName); //Construct a string variable the full path to the patient's directory.
+            snprintf(basePath, sizeof(basePath), "%s/Patients/%s_%s",
+                     DATA_ROOT, firstName, lastName); //Construct a string variable the full path to the patient's directory.
 
             deletePatientOrEmployee(basePath); //Delete the patient's folder from the 'Patients' folder.
         }
@@ -518,8 +519,8 @@ EmployeeNode* deleteEmployee(EmployeeNode* root, const char* firstName, const ch
             }
 
             char basePath[MAX_LINE_LENGTH];
-            snprintf(basePath, sizeof(basePath), "C:/Users/johna/OneDrive/Documents/CS 5008/Final Project/HIS data/Employees/%s_%s",
-                     firstName, lastName);
+            snprintf(basePath, sizeof(basePath), "%s/Employees/%s_%s",
+                     DATA_ROOT, firstName, lastName);
 
             deletePatientOrEmployee(basePath); 
         }
@@ -1025,7 +1026,7 @@ void promptAndProcessData(PatientNode** patientRoot, DepartmentNode** department
                 PatientNode* newPatient = createPatientNode(patient); //Function to create a new PatientNode with all this information.
                 *patientRoot = insertPatient(*patientRoot, newPatient); //Insert this patient into the existing AVL tree.
                 char basePath[MAX_LINE_LENGTH];
-                snprintf(basePath, sizeof(basePath), "C:/Users/johna/OneDrive/Documents/CS 5008/Final Project/HIS data/Patients/%s_%s", firstName, lastName); //Create a 'basePath' string that will be used to make a folder--
+                snprintf(basePath, sizeof(basePath), "%s/Patients/%s_%s", DATA_ROOT, firstName, lastName); //Create a 'basePath' string that will be used to make a folder--
 				//--after the patient's name.
                 _mkdir(basePath); //Make a new folder in the 'Patients' folder named after the patient.
                 char filename[MAX_LINE_LENGTH];
@@ -1085,7 +1086,7 @@ void promptAndProcessData(PatientNode** patientRoot, DepartmentNode** department
                 EmployeeNode* newEmployee = createEmployeeNode(employee); //Identical to patients portion.
                 addEmployeeToDepartment(departmentHead, employee.department, newEmployee);
                 char basePath[MAX_LINE_LENGTH];
-                snprintf(basePath, sizeof(basePath), "C:/Users/johna/OneDrive/Documents/CS 5008/Final Project/HIS data/Employees/%s_%s", firstName, lastName);
+                snprintf(basePath, sizeof(basePath), "%s/Employees/%s_%s", DATA_ROOT, firstName, lastName);
                 _mkdir(basePath);
                 char filename[MAX_LINE_LENGTH];
                 snprintf(filename, sizeof(filename), "%s/%s_%s.txt", basePath, firstName, lastName);
@@ -1131,14 +1132,14 @@ void promptAndProcessData(PatientNode** patientRoot, DepartmentNode** department
 
                                 if (choice == 'u') { //If the user wants to update the patient's data:
                                     char basePath[MAX_LINE_LENGTH]; //Initialize a basePath character.
-                                    snprintf(basePath, sizeof(basePath), "C:/Users/johna/OneDrive/Documents/CS 5008/Final Project/HIS data/Patients/%s_%s", firstName, lastName); //Set the basePath equal to a string representing--
+                                    snprintf(basePath, sizeof(basePath), "%s/Patients/%s_%s", DATA_ROOT, firstName, lastName); //Set the basePath equal to a string representing--
 									//--the folder location for the patient data.
                                     char filename[MAX_LINE_LENGTH]; //Initialize a filename character.
                                     snprintf(filename, sizeof(filename), "%s/%s_%s.txt", basePath, firstName, lastName); //Set filename equal to a string representing the path to the .txt file holding the patient's data.
                                     updatePatientData(foundPatient, filename); //Run the updatePatientData function for this patient at that file.
                                 } else if (choice == 'v') { 
                                     char basePath[MAX_LINE_LENGTH];
-                                    snprintf(basePath, sizeof(basePath), "C:/Users/johna/OneDrive/Documents/CS 5008/Final Project/HIS data/Patients/%s_%s", firstName, lastName); //Do the first half of the 'u' choice.
+                                    snprintf(basePath, sizeof(basePath), "%s/Patients/%s_%s", DATA_ROOT, firstName, lastName); //Do the first half of the 'u' choice.
                                     handleVisits(foundPatient, basePath); //Run the handleVisits function for that patient at that patients folder's basePath.
                                     break;
                                 } else if (choice == 'b') {
@@ -1189,7 +1190,7 @@ void promptAndProcessData(PatientNode** patientRoot, DepartmentNode** department
                             break;
                         } else if (choice == 'u') {
                             char basePath[MAX_LINE_LENGTH];
-                            snprintf(basePath, sizeof(basePath), "C:/Users/johna/OneDrive/Documents/CS 5008/Final Project/HIS data/Employees/%s_%s", firstName, lastName);
+                            snprintf(basePath, sizeof(basePath), "%s/Employees/%s_%s", DATA_ROOT, firstName, lastName);
                             char filename[MAX_LINE_LENGTH];
                             snprintf(filename, sizeof(filename), "%s/%s_%s.txt", basePath, firstName, lastName);
                             updateEmployeeData(foundEmployee, filename);
@@ -1217,7 +1218,7 @@ void promptAndProcessData(PatientNode** patientRoot, DepartmentNode** department
             if (isPatient) {
                 *patientRoot = deletePatient(*patientRoot, firstName, lastName); //Run the deletePatient function to remove them from the AVL tree.
                 char basePath[MAX_LINE_LENGTH];
-                snprintf(basePath, sizeof(basePath), "C:/Users/johna/OneDrive/Documents/CS 5008/Final Project/HIS data/Patients/%s_%s", firstName, lastName);
+                snprintf(basePath, sizeof(basePath), "%s/Patients/%s_%s", DATA_ROOT, firstName, lastName);
                 _rmdir(basePath); //Delete the folder for that patient containing all of their information.
                 printf("Patient %s %s deleted.\n", firstName, lastName);
             } else {
@@ -1243,7 +1244,7 @@ void promptAndProcessData(PatientNode** patientRoot, DepartmentNode** department
 		
 		                //Delete the employee's directory from the file explorer.
 		                char basePath[MAX_LINE_LENGTH];
-		                snprintf(basePath, sizeof(basePath), "C:/Users/johna/OneDrive/Documents/CS 5008/Final Project/HIS data/Employees/%s_%s", firstName, lastName);
+		                snprintf(basePath, sizeof(basePath), "%s/Employees/%s_%s", DATA_ROOT, firstName, lastName);
 		                _rmdir(basePath);
 		
 		                printf("Employee %s %s deleted.\n", firstName, lastName);
@@ -1532,7 +1533,7 @@ void handlePatientCheckIn(PriorityQueue* queue, PatientNode** patientRoot) {
 
         //Create directory and save the patient's file.
         char basePath[MAX_LINE_LENGTH];
-        snprintf(basePath, sizeof(basePath), "C:/Users/johna/OneDrive/Documents/CS 5008/Final Project/HIS data/Patients/%s_%s",
+        snprintf(basePath, sizeof(basePath), "%s/Patients/%s_%s", DATA_ROOT,
                  createdPatient->firstName, createdPatient->lastName); //Create a string representing the path to the new patient's folder, indicated by their name.
 
         _mkdir(basePath); //Make the directory located at the path of the string passed to this command.
@@ -1617,8 +1618,14 @@ int main() {
     initializePriorityQueue(&queue);
 
     //Load existing data into binary trees and linked lists.
-    loadPatients("C:/Users/johna/OneDrive/Documents/CS 5008/Final Project/HIS data/Patients", &patientRoot);
-    loadEmployees("C:/Users/johna/OneDrive/Documents/CS 5008/Final Project/HIS data/Employees", &departmentHead);
+    char patientsPath[MAX_LINE_LENGTH];
+	char employeesPath[MAX_LINE_LENGTH];
+	
+	snprintf(patientsPath, sizeof(patientsPath), "%s/Patients", DATA_ROOT);
+	snprintf(employeesPath, sizeof(employeesPath), "%s/Employees", DATA_ROOT);
+	
+	loadPatients(patientsPath, &patientRoot);
+	loadEmployees(employeesPath, &departmentHead);
 
     while (1) { //Infinite loop to continuously display the menu until the user chooses to terminate.
         displayMenu(); //Display the main menu to the user.
