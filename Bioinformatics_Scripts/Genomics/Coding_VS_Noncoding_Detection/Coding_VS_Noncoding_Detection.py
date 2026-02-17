@@ -1,4 +1,5 @@
 import math
+from pathlib import path
 
 '''John Gill: Genomics in Bioinformatics - Project 4 pt.1: Coding/Noncoding Matrices.
     This program reads in a number of .fasta files as well as a coding and a noncoding
@@ -12,14 +13,15 @@ import math
     one for noncoding probabilities. Then the largest score is saved and used to determine whether that
     ID between those two species represents coding or noncoding.'''
 
-file_directory = "C:/Users/johna/OneDrive/Documents/BINF 6400/Problem Set 4/"
-ancestor_path = file_directory + "Ancestor.fa"
-spacii_path = file_directory + "Spacii.fa"
-spacii_2100_path = file_directory + "Spacii_2100.fa"
-coding_model_path = file_directory + "codingModel.tab"
-noncoding_model_path = file_directory + "noncodingModel.tab"
-output_file_path = file_directory + "John_Gill_Model_Output.txt"
-output_file_2100_path = file_directory + "John_Gill_Model_Output_2100.txt"
+BASE_DIR = Path(__file__).resolve().parent 
+
+ancestor_path = BASE_DIR / "Ancestor.fa"
+spacii_path = BASE_DIR / "Spacii.fa"
+spacii_2100_path = BASE_DIR / "Spacii_2100.fa"
+coding_model_path = BASE_DIR / "codingModel.tab"
+noncoding_model_path = BASE_DIR / "noncodingModel.tab"
+output_file_path = BASE_DIR / "John_Gill_Model_Output.txt"
+output_file_2100_path = BASE_DIR / "John_Gill_Model_Output_2100.txt"
 
 modelCodons = [
     'TTT', 'TTC', 'TTA', 'TTG', 'CTT', 'CTC', 'CTA', 'CTG',
