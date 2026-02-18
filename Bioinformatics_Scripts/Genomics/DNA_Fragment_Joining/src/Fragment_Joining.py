@@ -1,11 +1,6 @@
 from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
-'''John Gill: Genomics in Bioinformatics - Project 1.
-    Description: This function reads in a .txt file of DNA fragments, fragmented from sequencing,
-    then employs a nested for-loop to continuously overlap their ends by a minimum of length k
-    until all fragments have been joined and we are left with a set of contigs that get posted 
-    to a .fasta file.'''
 
 
 def calculate_coverage(reads, contig_length):
