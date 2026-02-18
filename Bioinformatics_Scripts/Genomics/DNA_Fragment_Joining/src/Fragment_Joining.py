@@ -133,10 +133,10 @@ def main():
     BASE_DIR = Path(__file__).resolve().parent
 
     #input data folder (you include this in the repo).
-    DATA_DIR = BASE_DIR / "data"
+    DATA_DIR = BASE_DIR / "Input"
 
     #output folder created automatically.
-    OUTPUT_DIR = BASE_DIR / "outputs"
+    OUTPUT_DIR = BASE_DIR / "Output"
     OUTPUT_DIR.mkdir(exist_ok=True)
 
     input_file = DATA_DIR / "seqReadFile2023.txt"
