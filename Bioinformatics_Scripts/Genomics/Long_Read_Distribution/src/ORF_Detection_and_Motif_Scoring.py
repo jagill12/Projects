@@ -119,7 +119,7 @@ def identify_ORFs(input_content, output_file, quality_score_cutoff=7.5, min_orf_
 
 def main():
     input_file = 'c:/Users/johna/OneDrive/Documents/BINF 6400/Problem Set 2/spaceSeq.fa'
-    output_file = 'c:/Users/johna/OneDrive/Documents/BINF 6400/Problem Set 2/John_Gill_Homework_2_orf_output.fasta'
+    output_file = 'c:/Users/johna/OneDrive/Documents/BINF 6400/Problem Set 2/John_Gill_orf_output.fasta'
 
     with open(input_file, 'r') as infile:
         input_content = infile.readlines()
