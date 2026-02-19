@@ -1,7 +1,7 @@
 # Healthcare Information System (HIS)
 
 ## AVL Tree-Backed Patient and Employee Management System
-This is a command-line Healthcare Information System implemented in pure C, which is designed to demonstrate my aptitude with practical applacations of classic data structures and algorithms in a real-world setting.
+This is a command-line Healthcare Information System implemented in C, which is designed to demonstrate my aptitude with practical applacations of classic data structures and algorithms in a real-world setting.
 
 This project manages patient and employee records using self-balancing AVL trees, supports department organization, and implements a severity-based patient "ER" queue while persisting all added/edited data directly to the file system.
 
