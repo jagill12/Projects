@@ -1,4 +1,5 @@
 import re
+from pathlib import Path
 
 '''John Gill: Genomics in Bioinformatics - Project 2.
     This project takes in a .fa input file, strips it line-by-line
@@ -118,8 +119,15 @@ def identify_ORFs(input_content, output_file, quality_score_cutoff=7.5, min_orf_
             outfile.write(seq)
 
 def main():
-    input_file = 'c:/Users/johna/OneDrive/Documents/BINF 6400/Problem Set 2/spaceSeq.fa'
-    output_file = 'c:/Users/johna/OneDrive/Documents/BINF 6400/Problem Set 2/John_Gill_orf_output.fasta'
+    #Project root (one level above /src/).
+    BASE_DIR = Path(__file__).resolve().parent.parent
+
+    INPUT_DIR = BASE_DIR / "Input"
+    OUTPUT_DIR = BASE_DIR / "Output"
+    OUTPUT_DIR.mkdir(exist_ok=True)
+
+    input_file = INPUT_DIR / "spaceSeq.fa"
+    output_file = OUTPUT_DIR / "orf_results.fasta"
 
     with open(input_file, 'r') as infile:
         input_content = infile.readlines()
