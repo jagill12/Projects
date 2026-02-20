@@ -128,5 +128,5 @@ python src/ORF_HMM.py
 Outputs are created automatically inside the appropriate Output/ subdirectories
 
 ## Takeaways
-The intent of this project was beyond detecting ORFs directly; this project models the probabilistic pprcesses that make ORFs statistically likely to exist in the first place. By separating training and simulation into distinct stages, the 
+The intent of this project was beyond detecting ORFs directly; this project models the probabilistic processes that make ORFs statistically likely to exist in the first place. By separating training and simulation into distinct stages, the 
 workflow mirrors how probabilistic models are developed and explored in compuptational genomics research.
