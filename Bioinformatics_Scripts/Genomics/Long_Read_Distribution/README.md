@@ -6,7 +6,9 @@ demonstrate the likelihood of ORFs occuring by chance, and the additional filter
 by establishing expectations for ORF behavior in an unconstrained sequence space following blind probabilities, then by applying structured detection and motif scoring to assembled contigs.
 
 ## Script 1 - Long Read Distribution
+```
   -File: src/Long_Read_Distribution.py
+```
 This script generates random DNA sequences and scans them for valid Open Reading Frames based on start codons, stop codons, and reading frame constraints. The aim is to observe how often ORFs appear in sequences that contain no biological signal, which 
 provides intuition for why ORF detection alone is not sufficient evidence of gene content.
 
@@ -25,7 +27,9 @@ The script produces a .PNG file containing a histogram that visualizes the distr
 A copy of the resulting visualization is included in this directory's Output/ folder as "Figure_1.png." The script does not automatically export this image, it was manually saved and uploaded here.
 
 ## Script 2 - ORF Detection and Motif Scoring
+```
   - File: src/ORF_Detection_and_Motif_Scoring.py
+```
 The second script analyzes contigs stored in a FASTA file and identifies biologically valid ORFs, then evaluates those ORFs using a positional scoring motif.
 
 ### Method
