@@ -50,8 +50,8 @@ The only necessary input for this directory is spaceSeq.fa, a FASTA file contain
 ## Running the Scripts
 From the project root directory:
 
-python src/Long_Read_Distribution.py
-python src/ORF_Detection_and_Motif_Scoring.py
+  - python src/Long_Read_Distribution.py
+  - python src/ORF_Detection_and_Motif_Scoring.py
 
 Outputs are written to the Output/ directory.
 
