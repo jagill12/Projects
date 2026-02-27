@@ -136,6 +136,7 @@ Possible Extensions
     
 # Author
 John Gill
+
 M.S. Bioinformatics - Northeastern University
 Focus areas: Algorithms, Bioinformatics Pipelines, Systems Programming, and Data Engineering
 
